@@ -13,6 +13,10 @@
 		5E0F4E17221CA25900C9C87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F4E16221CA25900C9C87A /* Assets.xcassets */; };
 		5E0F4E1A221CA25900C9C87A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F4E18221CA25900C9C87A /* LaunchScreen.storyboard */; };
 		5E0F4E25221CA25900C9C87A /* Pocket_GPATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F4E24221CA25900C9C87A /* Pocket_GPATests.swift */; };
+		5E0F4E30221CA89200C9C87A /* SemesterDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F4E2F221CA89200C9C87A /* SemesterDetailsTableViewController.swift */; };
+		5E8E0C262232228C00D42DD8 /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E0C252232228C00D42DD8 /* StartMenuViewController.swift */; };
+		5ED466C522385C7D007C5FC9 /* SubjectDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */; };
+		5EDB79B02239BF4800DF509D /* AddSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB79AF2239BF4800DF509D /* AddSubjectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		5E0F4E20221CA25900C9C87A /* Pocket GPATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pocket GPATests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E0F4E24221CA25900C9C87A /* Pocket_GPATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_GPATests.swift; sourceTree = "<group>"; };
 		5E0F4E26221CA25900C9C87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E0F4E2F221CA89200C9C87A /* SemesterDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterDetailsTableViewController.swift; sourceTree = "<group>"; };
+		5E8E0C252232228C00D42DD8 /* StartMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
+		5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDataSource.swift; sourceTree = "<group>"; };
+		5EDB79AF2239BF4800DF509D /* AddSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				5E0F4E16221CA25900C9C87A /* Assets.xcassets */,
 				5E0F4E18221CA25900C9C87A /* LaunchScreen.storyboard */,
 				5E0F4E1B221CA25900C9C87A /* Info.plist */,
+				5E8E0C252232228C00D42DD8 /* StartMenuViewController.swift */,
+				5E0F4E2F221CA89200C9C87A /* SemesterDetailsTableViewController.swift */,
+				5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */,
+				5EDB79AF2239BF4800DF509D /* AddSubjectViewController.swift */,
 			);
 			path = "Pocket GPA";
 			sourceTree = "<group>";
@@ -199,6 +211,10 @@
 			files = (
 				5E0F4E12221CA25200C9C87A /* ViewController.swift in Sources */,
 				5E0F4E10221CA25200C9C87A /* AppDelegate.swift in Sources */,
+				5E0F4E30221CA89200C9C87A /* SemesterDetailsTableViewController.swift in Sources */,
+				5EDB79B02239BF4800DF509D /* AddSubjectViewController.swift in Sources */,
+				5ED466C522385C7D007C5FC9 /* SubjectDataSource.swift in Sources */,
+				5E8E0C262232228C00D42DD8 /* StartMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
