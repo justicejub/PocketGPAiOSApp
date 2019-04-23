@@ -21,12 +21,16 @@ class AddSubjectViewController: UIViewController {
     }
     
     @IBAction func submitTapped(_ sender: Any) {
-        let class1: Subject = Subject(name: (addSubjectTextField.text)!, credits: Int(addCreditsTextField.text!)!, gpa: 0, assignments: [])
-        totalCredits += Int(addCreditsTextField.text!)!
-        
-        classes.append(class1);
-        
-        navigationController?.popViewController(animated: true) //goes back
+        if (addSubjectTextField.hasText && addCreditsTextField.hasText){
+            let class1: Subject = Subject(name: (addSubjectTextField.text)!, credits: Int(addCreditsTextField.text!)!, gpa: 0, letterGrade: "-" ,assignments: [])
+            
+            totalCredits += Int(addCreditsTextField.text!)!
+            classes.append(class1);
+            
+            //print(totalCredits)
+            
+            navigationController?.popViewController(animated: true) //goes back
+        }
     }
     
     /*

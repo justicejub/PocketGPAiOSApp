@@ -1,25 +1,23 @@
 //
-//  SemesterDetailsTableViewController.swift
+//  SubjectDetailsTableViewController.swift
 //  Pocket GPA
 //
-//  Created by Justice Jubilee on 2/19/19.
+//  Created by Justice Jubilee on 3/23/19.
 //  Copyright © 2019 Justice Jubilee. All rights reserved.
 //
 
 import UIKit
 
-class SemesterDetailsTableViewController: UITableViewController {
+class SubjectDetailsTableViewController: UITableViewController {
+
+    var currentSubjectIndex: Int!
+    var selectedAssignment: Int!
     
-    var selectedClass: Int!
-    
-     var deleteIcon: UIImage = #imageLiteral(resourceName: "deleteIcon")
-    
-    override func viewDidAppear(_ animated: Bool) { //reloads for 
+    override func viewDidAppear(_ animated: Bool) { //reloads for
         tableView.reloadData()
+        updateSubjectGPA(subjectIndex: currentSubjectIndex);
+        updateSubjectLetterGrade(subjectIndex: currentSubjectIndex);
         updateSemesterGPA()
-        
-        
-       
     }
     
     override func viewDidLoad() {
@@ -36,94 +34,94 @@ class SemesterDetailsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1;
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return classes.count
+        return classes[currentSubjectIndex].assignments.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SemesterDetailsCell", for: indexPath) as! SemesterDetailsTableViewCell
-
-        let currentClass = classes[indexPath.row]
-        //cell.textLabel?.text = currentClass.name;
-        cell.subjectNameLabel.text = currentClass.name
-        cell.letterGradeLabel.text = currentClass.letterGrade
-        cell.subjectCreditsLabel.text = String(currentClass.credits)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SubjectDetailsCell", for: indexPath) as! SubjectDetailsTableViewCell
         
+        let currentAssignment = classes[currentSubjectIndex].assignments[indexPath.row]
+        cell.assignmentName.text = currentAssignment.aName
+        cell.aWeightLabel.text = String(currentAssignment.aWeight) + "%"
+        cell.aGrade.text = String(currentAssignment.totalScore * 100) + "%"
         return cell
     }
     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, titleForHeaderInSection section: Int) -> String? {
-
-        let currentClass = classes[indexPath.row]
-        return currentClass.name
-        
-    }
     //trailing swipe configuration - to delete cell
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        //selectedClass = indexPath.row;
-        print(semesterGPA)
+
         let delete = deleteAction(at: indexPath);
-        
-        
-        
         return UISwipeActionsConfiguration(actions: [delete])
-        
     }
     
     //deleteaAction helper -- removes subject
     func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
-            classes.remove(at: indexPath.row)
+            classes[self.currentSubjectIndex].assignments.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             completion(true)
+            
         }
         
         //action.image = #imageLiteral(resourceName: "deleteIcon")
         action.title = "Delete";
         action.backgroundColor = .red
         
-        //updateSemesterGPA()
         return action
-        
+    }
+    
+    
+    
+    
+    @IBAction func addAssignmentTapped(_ sender: Any) { //add (+) tapped
+        self.performSegue(withIdentifier: "addAssignment", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { //cell tapped
-        selectedClass = indexPath.row;
-        //print(selectedClass)
+        selectedAssignment = indexPath.row;
+        self.performSegue(withIdentifier: "assignmentTapped", sender: self)
         
-         self.performSegue(withIdentifier: "subjectTapped", sender: self)
-    }
-    
-    @IBAction func addSubject(_ sender: Any) {
-        self.performSegue(withIdentifier: "addSubject", sender: self)
+        updateSubjectGPA(subjectIndex: currentSubjectIndex);
+        updateSubjectLetterGrade(subjectIndex: currentSubjectIndex);
+        updateSemesterGPA()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addSubject" {
-            guard let destinationViewController = segue.destination as? AddSubjectViewController
-                else{
+        if segue.identifier == "addAssignment" {
+            guard let destinationViewController = segue.destination as? AddAssignmentViewController
+                else {
                     return
             }
+            
+            updateSubjectGPA(subjectIndex: currentSubjectIndex);
+            updateSubjectLetterGrade(subjectIndex: currentSubjectIndex);
             updateSemesterGPA()
-            print(semesterGPA)
+
+            destinationViewController.currentSubjectIndex = currentSubjectIndex
+            
+            
         }
-        if segue.identifier == "subjectTapped" {
-            guard let destinationViewController = segue.destination as? SubjectDetailsTableViewController
-                else{
+        
+        if segue.identifier == "assignmentTapped" {
+            guard let destinationViewController = segue.destination as? AssignmentDetailsTableViewController
+                else {
                     return
                 }
             
+            updateSubjectGPA(subjectIndex: currentSubjectIndex);
+            updateSubjectLetterGrade(subjectIndex: currentSubjectIndex);
             updateSemesterGPA()
-            destinationViewController.currentSubjectIndex = selectedClass
+            
+            destinationViewController.currentAssignmentIndex = selectedAssignment
+            destinationViewController.currentSubjectIndex = currentSubjectIndex
         }
     }
-
-    //*/
+    
 
     /*
     // Override to support conditional editing of the table view.

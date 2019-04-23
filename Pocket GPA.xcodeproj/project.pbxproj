@@ -14,9 +14,15 @@
 		5E0F4E1A221CA25900C9C87A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0F4E18221CA25900C9C87A /* LaunchScreen.storyboard */; };
 		5E0F4E25221CA25900C9C87A /* Pocket_GPATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F4E24221CA25900C9C87A /* Pocket_GPATests.swift */; };
 		5E0F4E30221CA89200C9C87A /* SemesterDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0F4E2F221CA89200C9C87A /* SemesterDetailsTableViewController.swift */; };
+		5E7BBAD4226B963700634C10 /* SemesterDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7BBAD3226B963700634C10 /* SemesterDetailsTableViewCell.swift */; };
 		5E8E0C262232228C00D42DD8 /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8E0C252232228C00D42DD8 /* StartMenuViewController.swift */; };
+		5E9645BC22488D0300D2FC48 /* AssignmentDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9645BB22488D0300D2FC48 /* AssignmentDetailsTableViewController.swift */; };
+		5E9645BE2248942C00D2FC48 /* AddGradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9645BD2248942C00D2FC48 /* AddGradeViewController.swift */; };
+		5ECCE673226BBE9F00453302 /* SubjectDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECCE672226BBE9F00453302 /* SubjectDetailsTableViewCell.swift */; };
 		5ED466C522385C7D007C5FC9 /* SubjectDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */; };
 		5EDB79B02239BF4800DF509D /* AddSubjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB79AF2239BF4800DF509D /* AddSubjectViewController.swift */; };
+		5EDB79B42246A73800DF509D /* SubjectDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB79B32246A73800DF509D /* SubjectDetailsTableViewController.swift */; };
+		5EDB79B62246AEA900DF509D /* AddAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDB79B52246AEA900DF509D /* AddAssignmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +47,15 @@
 		5E0F4E24221CA25900C9C87A /* Pocket_GPATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket_GPATests.swift; sourceTree = "<group>"; };
 		5E0F4E26221CA25900C9C87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E0F4E2F221CA89200C9C87A /* SemesterDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterDetailsTableViewController.swift; sourceTree = "<group>"; };
+		5E7BBAD3226B963700634C10 /* SemesterDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		5E8E0C252232228C00D42DD8 /* StartMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
+		5E9645BB22488D0300D2FC48 /* AssignmentDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentDetailsTableViewController.swift; sourceTree = "<group>"; };
+		5E9645BD2248942C00D2FC48 /* AddGradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGradeViewController.swift; sourceTree = "<group>"; };
+		5ECCE672226BBE9F00453302 /* SubjectDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDataSource.swift; sourceTree = "<group>"; };
 		5EDB79AF2239BF4800DF509D /* AddSubjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectViewController.swift; sourceTree = "<group>"; };
+		5EDB79B32246A73800DF509D /* SubjectDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectDetailsTableViewController.swift; sourceTree = "<group>"; };
+		5EDB79B52246AEA900DF509D /* AddAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +105,14 @@
 				5E0F4E1B221CA25900C9C87A /* Info.plist */,
 				5E8E0C252232228C00D42DD8 /* StartMenuViewController.swift */,
 				5E0F4E2F221CA89200C9C87A /* SemesterDetailsTableViewController.swift */,
-				5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */,
+				5E7BBAD3226B963700634C10 /* SemesterDetailsTableViewCell.swift */,
 				5EDB79AF2239BF4800DF509D /* AddSubjectViewController.swift */,
+				5EDB79B32246A73800DF509D /* SubjectDetailsTableViewController.swift */,
+				5ECCE672226BBE9F00453302 /* SubjectDetailsTableViewCell.swift */,
+				5EDB79B52246AEA900DF509D /* AddAssignmentViewController.swift */,
+				5E9645BB22488D0300D2FC48 /* AssignmentDetailsTableViewController.swift */,
+				5E9645BD2248942C00D2FC48 /* AddGradeViewController.swift */,
+				5ED466C422385C7D007C5FC9 /* SubjectDataSource.swift */,
 			);
 			path = "Pocket GPA";
 			sourceTree = "<group>";
@@ -209,12 +227,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9645BE2248942C00D2FC48 /* AddGradeViewController.swift in Sources */,
 				5E0F4E12221CA25200C9C87A /* ViewController.swift in Sources */,
 				5E0F4E10221CA25200C9C87A /* AppDelegate.swift in Sources */,
 				5E0F4E30221CA89200C9C87A /* SemesterDetailsTableViewController.swift in Sources */,
 				5EDB79B02239BF4800DF509D /* AddSubjectViewController.swift in Sources */,
+				5E9645BC22488D0300D2FC48 /* AssignmentDetailsTableViewController.swift in Sources */,
 				5ED466C522385C7D007C5FC9 /* SubjectDataSource.swift in Sources */,
+				5ECCE673226BBE9F00453302 /* SubjectDetailsTableViewCell.swift in Sources */,
+				5EDB79B42246A73800DF509D /* SubjectDetailsTableViewController.swift in Sources */,
 				5E8E0C262232228C00D42DD8 /* StartMenuViewController.swift in Sources */,
+				5EDB79B62246AEA900DF509D /* AddAssignmentViewController.swift in Sources */,
+				5E7BBAD4226B963700634C10 /* SemesterDetailsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

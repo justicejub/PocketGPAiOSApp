@@ -29,8 +29,9 @@ class StartMenuViewController: UIViewController {
                     return
             }
             
-            let class1: Subject = Subject(name: (classInputTextField.text)!, credits: Int(creditsInputTextField.text!)!, gpa: 0, assignments: [])
-            totalCredits += Int(creditsInputTextField.text!)!
+            let class1: Subject = Subject(name: (classInputTextField.text)!, credits: Int(creditsInputTextField.text!)!, gpa: 0, letterGrade: "-", assignments: [])
+            
+             totalCredits += Int(creditsInputTextField.text!)!
             classes.append(class1);
            // destinationViewController.class1 = classInputTextField.text
         }
